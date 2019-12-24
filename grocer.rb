@@ -37,7 +37,7 @@ def consolidate_cart(cart)
     duplicate = false
     # checks for duplicate
     while checker < new_cart.length do
-      if new_cart[checker][:item] == cart[index][:item]
+      if find_item_by_name_in_collection(cart[index][:item], new_cart)
         new_cart[checker][:count] += 1
         duplicate = true
       end
