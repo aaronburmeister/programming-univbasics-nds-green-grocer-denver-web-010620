@@ -25,11 +25,12 @@ def consolidate_cart(cart)
     while checker < new_cart.length do
       if new_cart[checker][:item] == cart[index][:item]
         new_cart[checker][:count] += 1
+        added = true
       end
       checker += 1
     end
-    # if no duplicate found, add item, set count = 1
-    if new_cart.fetch[:item]("count")
+    # if no duplicate found in new_cart, add item, set count = 1
+    if 
       new_cart << cart[index]
       new_cart.last[:count] = 1
     end
