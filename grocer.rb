@@ -3,7 +3,7 @@ def find_item_by_name_in_collection(name, collection)
   
   index = 0
   while index < collection.length do
-    if collection[index][:name] == name
+    if collection[index][:item] == name
       return collection[index]
     end
     index += 1
