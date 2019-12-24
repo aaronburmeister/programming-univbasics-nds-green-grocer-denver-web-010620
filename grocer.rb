@@ -60,7 +60,6 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   index = 0
-  items = []
   while index < coupons.length do
     cart_index = 0
     coupon_applied = false
@@ -70,7 +69,15 @@ def apply_coupons(cart, coupons)
         # matching coupon!
         cart[cart_index][:count] -= coupons[index][:num]
         if cart[cart_index][:count] == 0
-          
+          cart.delete_at(cart_index)
+        end
+        cart << {
+          item: cart[cart_index][:item] + " W/COUPON",
+          price: coupons[index][:cost],
+          clearance: cart[cart_index][:clearance],
+          count: cart[cart_index][:count] - coupons[index][:num]
+        }
+        items
       end
       cart_index += 1
     end
