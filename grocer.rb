@@ -21,17 +21,17 @@ def consolidate_cart(cart)
   new_cart = []
   while index < cart.length do
     checker = 0
-    added = false
+    duplicate = false
     # checks for duplicate
     while checker < new_cart.length do
       if new_cart[checker][:item] == cart[index][:item]
         new_cart[checker][:count] += 1
-        added = true
+        duplicate = true
       end
       checker += 1
     end
     # if no duplicate found in new_cart, add item, set count = 1
-    if added = false
+    if duplicate = false
       new_cart << cart[index]
       new_cart.last[:count] = 1
     end
@@ -40,6 +40,8 @@ def consolidate_cart(cart)
   new_cart
   
 end
+
+
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
