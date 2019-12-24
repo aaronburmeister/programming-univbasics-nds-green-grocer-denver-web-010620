@@ -29,7 +29,7 @@ def consolidate_cart(cart)
       checker += 1
     end
     # if no duplicate found, add item, set count = 1
-    if new_cart.fetch(:count)
+    if new_cart.fetch[:item]("count")
       new_cart << cart[index]
       new_cart.last[:count] = 1
     end
