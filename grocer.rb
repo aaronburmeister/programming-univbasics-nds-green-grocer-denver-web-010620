@@ -32,6 +32,7 @@ def consolidate_cart(cart)
     if new_cart.fetch(:count)
       new_cart << cart[index]
       new_cart.last[:count] = 1
+    end
     index += 1
   end
   new_cart
