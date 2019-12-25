@@ -55,6 +55,7 @@ def apply_coupons(cart, coupons)
     while cart_index < cart.length && coupon_applied == false do
       if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] >= coupons[index][:num]
         # matching coupon!
+        puts "Found a coupon!"
         cart[cart_index][:count] -= coupons[index][:num]
         if cart[cart_index][:count] == 0
           cart.delete_at(cart_index)
