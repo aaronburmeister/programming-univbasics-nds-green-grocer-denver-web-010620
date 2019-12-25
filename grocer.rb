@@ -113,6 +113,6 @@ carty = [
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 
-consolidated_carty = consolidate_cart(carty)
-puts apply_coupons(consolidated_carty, coupins)
+
+puts apply_coupons(consolidate_cart(carty), coupins)
 #puts checkout(carty,coupins)
