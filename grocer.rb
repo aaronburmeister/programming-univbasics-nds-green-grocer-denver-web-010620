@@ -75,7 +75,6 @@ carty = [
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 test_cart = apply_coupons(carty, coupins)
-puts apply_clearance(test_cart)
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
@@ -113,3 +112,5 @@ def checkout(cart, coupons)
   end
   total_price
 end
+
+puts apply_clearance(test_cart)
