@@ -80,8 +80,14 @@ puts test_cart
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
-  
-  
+  index = 0
+  while index < cart.length do
+    if cart[index][:clearance] == true
+      cart[index][:price] *= 0.8
+    end
+    index += 1
+  end
+  cart
   
   
   # REMEMBER: This method **should** update cart
