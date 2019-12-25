@@ -55,17 +55,16 @@ def apply_coupons(cart, coupons)
     while cart_index < cart.length && coupon_applied == false do
       if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] >= coupons[index][:num]
         # matching coupon!
-        puts "Found a coupon!"
         cart[cart_index][:count] -= coupons[index][:num]
-        if cart[cart_index][:count] == 0
-          cart.delete_at(cart_index)
-        end
         cart << {
           item: cart[cart_index][:item] + " W/COUPON",
           price: coupons[index][:cost]/coupons[index][:num],
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
+        if cart[cart_index][:count] == 0
+          cart.delete_at(cart_index)
+        end
       end
       cart_index += 1
     end
