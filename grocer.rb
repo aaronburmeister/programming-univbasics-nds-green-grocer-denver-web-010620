@@ -55,13 +55,14 @@ def apply_coupons(cart, coupons)
       if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] >= coupons[index][:num]
         # matching coupon!
         cart[cart_index][:count] -= coupons[index][:num]
+        puts "Before the addition #{cart} ... after"
         cart << {
           item: cart[cart_index][:item] + " W/COUPON",
           price: coupons[index][:cost]/coupons[index][:num],
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
-        puts "Start... #{cart} ...End"
+        puts "An extra Avocado is here!"
       end
       cart_index += 1
     end
@@ -115,5 +116,5 @@ carty = [
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 
 consolidate_cart(carty)
-puts apply_coupons(carty, coupins)
+apply_coupons(carty, coupins)
 #puts checkout(carty,coupins)
