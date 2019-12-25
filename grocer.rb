@@ -46,7 +46,6 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  puts "Is it at the beginning? #{cart} ...Maybe"
   index = 0
   while index < coupons.length do
     cart_index = 0
@@ -56,7 +55,6 @@ def apply_coupons(cart, coupons)
       if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] >= coupons[index][:num]
         # matching coupon!
         cart[cart_index][:count] -= coupons[index][:num]
-        puts "Before the addition #{cart} ... after"
         cart << {
           item: cart[cart_index][:item] + " W/COUPON",
           price: coupons[index][:cost]/coupons[index][:num],
@@ -115,6 +113,6 @@ carty = [
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 
-consolidate_cart(carty)
-apply_coupons(carty, coupins)
+consolidated_carty = consolidate_cart(carty)
+puts apply_coupons(carty, coupins)
 #puts checkout(carty,coupins)
