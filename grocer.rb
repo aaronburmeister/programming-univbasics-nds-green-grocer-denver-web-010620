@@ -74,9 +74,8 @@ carty = [
 ]
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-puts carty[0][:count] >= coupins[0][:num]
 test_cart = apply_coupons(carty, coupins)
-puts test_cart
+puts apply_clearance(test_cart)
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
