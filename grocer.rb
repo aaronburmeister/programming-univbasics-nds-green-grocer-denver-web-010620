@@ -46,6 +46,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  puts "Is it at the beginning? #{cart} ...Maybe"
   index = 0
   while index < coupons.length do
     cart_index = 0
@@ -62,7 +63,6 @@ def apply_coupons(cart, coupons)
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
-        puts "An extra Avocado is here!"
       end
       cart_index += 1
     end
