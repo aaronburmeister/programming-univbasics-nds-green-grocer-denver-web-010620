@@ -91,7 +91,9 @@ carty = [
   {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}
 ]
 
-coupons = 
+coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
+
+puts apply_coupons(carty, coupins)
 
 
 def apply_clearance(cart)
