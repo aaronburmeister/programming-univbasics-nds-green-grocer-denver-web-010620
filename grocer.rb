@@ -70,7 +70,8 @@ def apply_coupons(cart, coupons)
 end
 
 carty = [
-  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}
+  {:item => "AVOCADO", :price => 3.00, :clearance => true},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true}
 ]
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
