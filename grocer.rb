@@ -89,8 +89,6 @@ def apply_clearance(cart)
     index += 1
   end
   cart
-  
-  
   # REMEMBER: This method **should** update cart
 end
 
