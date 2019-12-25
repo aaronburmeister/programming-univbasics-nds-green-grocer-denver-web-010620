@@ -61,6 +61,7 @@ def apply_coupons(cart, coupons)
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
+        puts "Start... #{cart} ...End"
       end
       cart_index += 1
     end
