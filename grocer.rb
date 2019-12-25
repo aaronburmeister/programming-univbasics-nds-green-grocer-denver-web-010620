@@ -107,15 +107,3 @@ def checkout(cart, coupons)
   end
   total_price
 end
-
-carty = [
-  {:item => "AVOCADO", :price => 3.00, :clearance => true},
-  {:item => "AVOCADO", :price => 3.00, :clearance => true},
-  {:item => "CHEESE", :price => 2.50, :clearance => false}
-]
-
-coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-
-
-
-puts checkout(carty,coupins)
