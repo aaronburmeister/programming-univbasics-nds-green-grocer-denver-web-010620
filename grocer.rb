@@ -66,7 +66,7 @@ def apply_coupons(cart, coupons)
     # search cart for applicable coupons
     puts "Searching for coupons..."
     while cart_index < cart.length && coupon_applied == false do
-      if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] <= coupons[index][:num]
+      if cart[cart_index][:item] == coupons[index][:item] && cart[cart_index][:count] =< coupons[index][:num]
         # matching coupon!
         cart[cart_index][:count] -= coupons[index][:num]
         if cart[cart_index][:count] == 0
