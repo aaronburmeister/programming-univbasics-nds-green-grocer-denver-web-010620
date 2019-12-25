@@ -75,7 +75,6 @@ carty = [
 ]
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-test_cart = apply_coupons(carty, coupins)
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
