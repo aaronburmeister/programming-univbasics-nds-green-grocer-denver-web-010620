@@ -76,8 +76,7 @@ def apply_coupons(cart, coupons)
           item: cart[cart_index][:item] + " W/COUPON",
           price: coupons[index][:cost]/coupons[index][:num],
           clearance: cart[cart_index][:clearance],
-          count: coupons[index][:num]
-        }
+          count: coupons[index][:num]}
         coupon_applied = true
       end
       cart_index += 1
