@@ -114,3 +114,4 @@ def checkout(cart, coupons)
 end
 
 puts apply_clearance(test_cart)
+puts checkout(carty,coupins)
