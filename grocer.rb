@@ -101,9 +101,7 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  consolidate_cart(cart)
-  apply_coupons(cart,coupons)
-  apply_clearance(cart)
+  apply_clearance(apply_coupons(consolidate_cart(cart),coupons))
   
   index = 0
   total_price = 0
@@ -115,5 +113,5 @@ def checkout(cart, coupons)
   total_price
 end
 
-puts apply_clearance(test_cart)
+
 puts checkout(carty,coupins)
