@@ -61,24 +61,21 @@ def apply_coupons(cart, coupons)
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
-        #if cart[cart_index][:count] == 0
-        #  cart.delete_at(cart_index)
-        #end
       end
       cart_index += 1
     end
     index += 1
   end
   cart
-  
 end
+
 carty = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}
 ]
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 puts carty[0][:count] >= coupins[0][:num]
-puts apply_coupons(carty, coupins)
+test_cart = apply_coupons(carty, coupins)
 
 
 def apply_clearance(cart)
