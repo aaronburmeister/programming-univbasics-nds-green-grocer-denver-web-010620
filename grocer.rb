@@ -61,9 +61,9 @@ def apply_coupons(cart, coupons)
           clearance: cart[cart_index][:clearance],
           count: coupons[index][:num]}
         coupon_applied = true
-        if cart[cart_index][:count] == 0
-          cart.delete_at(cart_index)
-        end
+        #if cart[cart_index][:count] == 0
+        #  cart.delete_at(cart_index)
+        #end
       end
       cart_index += 1
     end
