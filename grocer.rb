@@ -93,8 +93,7 @@ carty = [
 ]
 
 coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-puts carty[0][:count]
-puts coupins[0][:num]
+puts carty[0][:count] <= coupins[0][:num]
 puts apply_coupons(carty, coupins)
 
 
