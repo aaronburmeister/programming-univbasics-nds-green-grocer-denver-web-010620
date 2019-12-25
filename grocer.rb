@@ -1,3 +1,10 @@
+carty = [
+  {:item => "AVOCADO", :price => 3.00, :clearance => true},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true}
+]
+
+coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   
@@ -68,13 +75,6 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
-
-carty = [
-  {:item => "AVOCADO", :price => 3.00, :clearance => true},
-  {:item => "AVOCADO", :price => 3.00, :clearance => true}
-]
-
-coupins = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
